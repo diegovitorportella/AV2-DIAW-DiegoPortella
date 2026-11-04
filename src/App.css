@@ -1,0 +1,167 @@
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.grade-roca {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grade-outros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--papel);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.card-roca {
+  border: 4px solid var(--celeiro);
+  background-color: #fff;
+}
+
+.card-foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-nome {
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.selo-roca {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: var(--celeiro);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.mensagem-confirmacao {
+  background-color: var(--pasto);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mensagem-confirmacao a {
+  color: var(--papel);
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.sem-votos {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.lista-resultado {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.resultado-item {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--papel);
+  padding: 1rem;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.resultado-foto {
+  width: 160px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.resultado-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.resultado-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resultado-cabecalho h3 {
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  font-weight: 800;
+}
+
+.placar-lider {
+  border: 4px solid var(--celeiro);
+  background-color: #fff;
+}
+
+.selo-sairia {
+  background-color: var(--celeiro);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.resultado-numeros {
+  display: flex;
+  justify-content: space-between;
+  color: var(--tinta);
+  font-weight: bold;
+}
+
+.barra {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.barra-preenchida {
+  background-color: var(--celeiro);
+  height: 100%;  
+}
+
+@media (max-width: 600px) {
+  .resultado-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .resultado-foto {
+    width: 100%;
+  }
+}
